@@ -1,5 +1,10 @@
 import pyaudio
 import wave
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+Audio_File_Path = os.getenv("Audio_File")
 
 FRAME_PER_BUFFER = 3200
 FORMAT = pyaudio.paInt16
@@ -31,7 +36,7 @@ p.terminate()
 
 print("* done")
 
-obj = wave.open("Data/Assembly_AI_output.wav", "wb")
+obj = wave.open(Audio_File_Path, "wb")
 obj.setnchannels(CHANNELS)
 obj.setsampwidth(p.get_sample_size(FORMAT))
 obj.setframerate(RATE)
