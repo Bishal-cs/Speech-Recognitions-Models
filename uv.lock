@@ -384,6 +384,12 @@ wheels = [
 ]
 
 [[package]]
+name = "mtranslate"
+version = "1.8"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/17/a2e5c00bf666fcbc119a44c5f20406e7be951a7d720bb48e573815a8ffc3/mtranslate-1.8.tar.gz", hash = "sha256:034f8b4cd0bb96efbb4e4d5935e2d0a45a46dadf567d60bc200d77440bba5e0c", size = 2443, upload_time = "2021-01-02T19:38:28.67Z" }
+
+[[package]]
 name = "numpy"
 version = "2.2.6"
 source = { registry = "https://pypi.org/simple" }
@@ -741,6 +747,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "dotenv" },
     { name = "faster-whisper" },
+    { name = "mtranslate" },
     { name = "pyaudio" },
     { name = "requests" },
     { name = "selenium" },
@@ -753,6 +760,7 @@ dependencies = [
 requires-dist = [
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "faster-whisper", specifier = ">=1.1.1" },
+    { name = "mtranslate", specifier = ">=1.8" },
     { name = "pyaudio", specifier = ">=0.2.14" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "selenium", specifier = ">=4.34.0" },
